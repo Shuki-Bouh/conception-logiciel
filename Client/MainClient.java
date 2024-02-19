@@ -1,6 +1,4 @@
-package launchPattern;
-
-import client.ClientTCP;
+package Client;
 
 public class MainClient {
 

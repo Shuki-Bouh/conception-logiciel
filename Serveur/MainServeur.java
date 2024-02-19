@@ -1,6 +1,4 @@
-package launchPattern;
-
-import servPattern.ServeurTCP;
+package Serveur;
 
 public class MainServeur {
 

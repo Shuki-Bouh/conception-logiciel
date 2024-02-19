@@ -1,4 +1,4 @@
-package servPattern;
+package Serveur;
 
 public interface IContext {
 

@@ -1,16 +1,17 @@
-package servPattern;
+package Serveur;
+
 import java.io.IOException;
 import java.net.Socket;
 
 /**
- * Processus de Transaction (anciennement ServeurSpecifique)
+ * Processus de Transaction (anciennement Serveur.ServeurSpecifique)
  */
-class ProcessusTransaction extends Thread {
+class ServeurSpecifique extends Thread {
 
 	private Socket clientSocket;
 	private ServeurTCP monServeurTCP;
 
-	public  ProcessusTransaction(Socket uneSocket, ServeurTCP unServeur) {        
+	public ServeurSpecifique(Socket uneSocket, ServeurTCP unServeur) {
 		super("ServeurThread");
 		clientSocket = uneSocket;
 		System.out.println("[ProcessusTransaction] CLIENT : " + clientSocket);

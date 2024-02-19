@@ -1,7 +1,7 @@
-package servPattern;
+package Serveur;
+
 import java.io.*;
 import java.net.*;
-
 
 public class ServeurTCP extends Thread{
 
@@ -31,7 +31,7 @@ public class ServeurTCP extends Thread{
 
 
 	public String toString() {        
-		return "[ServeurTCP] Port : " +  numeroPort + ", Contexte: " + contexte ;
+		return "[Serveur.ServeurTCP] Port : " +  numeroPort + ", Contexte: " + contexte ;
 	} 
 
 	public void run() {
@@ -55,7 +55,7 @@ public class ServeurTCP extends Thread{
 				System.out.println("Accept failed: " + serverSocket.getLocalPort() + ", " + e);
 				System.exit(1);
 			}
-			ProcessusTransaction st = new ProcessusTransaction( clientSocket , this );
+			ServeurSpecifique st = new ServeurSpecifique( clientSocket , this );
 			st.start();
 		}
 		System.out.println("Deja " + nbConnexions + " clients. Maximum autorisé atteint");
