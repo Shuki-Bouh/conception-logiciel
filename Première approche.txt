@@ -1,0 +1,34 @@
+User stories :
+
+On doit pouvoir se connecter au serveur du bio-reacteur avec un client tcp
+On doit pouvoir ajouter/modifier les données du bio-réacteur
+On doit pouvoir observer l'évolution des données
+
+
+Class imaginées :
+
+	class bioreacteur
+		fonction : 
+			- lire
+			- organiser
+
+	class serveurSpé
+
+		fonction : 
+			- envoyer
+			- recevoir
+
+	class serveur
+		
+
+
+__________________________________________________________________________________________________________________________________
+
+
+
+	class BioGUI (observe le client tcp ?)
+		permet de voir l'évolution
+		changer les données
+
+
+	class clientTCP
