@@ -1,4 +1,4 @@
-package Client;
+package src.main.Client;
 
 import java.io.*;
 import java.net.*;
@@ -31,7 +31,7 @@ public class ClientTCP {
 					new InputStreamReader (socketServeur.getInputStream()));
 			ok = true;
 		} catch (UnknownHostException e) {
-			System.err.println("Serveur inconnu : " + e);
+			System.err.println("src.main.test.Serveur inconnu : " + e);
 
 		} catch (ConnectException e) {
 			System.err.println("Exception lors de la connexion:" + e);
@@ -65,7 +65,7 @@ public class ClientTCP {
 			System.out.println( "Reponse serveur : " + msgServeur );
 
 		} catch (UnknownHostException e) {
-			System.err.println("Serveur inconnu : " + e);
+			System.err.println("src.main.test.Serveur inconnu : " + e);
 		} catch (IOException e) {
 			System.err.println("Exception entree/sortie:  " + e);
 			e.printStackTrace();
@@ -77,7 +77,7 @@ public class ClientTCP {
 	public String transmettreChaineConnexionPonctuelle(String uneChaine) {
 		String msgServeur = null;
 		String chaineRetour = "";
-		System.out.println("\nClient connexionTransmettreChaine " + uneChaine);
+		System.out.println("\nsrc.main.test.Client connexionTransmettreChaine " + uneChaine);
 		if (connecterAuServeur() == true) {
 			try {
 				socOut.println(uneChaine);
@@ -87,7 +87,7 @@ public class ClientTCP {
 					chaineRetour += msgServeur + "\n";
 					msgServeur = socIn.readLine();
 				}
-				System.out.println("Client msgServeur " + chaineRetour);
+				System.out.println("src.main.test.Client msgServeur " + chaineRetour);
 				deconnecterDuServeur();
 			} catch (Exception e) {
 				System.err.println("Exception lors de la connexion client:  " + e);

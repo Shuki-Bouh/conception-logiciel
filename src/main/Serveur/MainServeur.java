@@ -1,4 +1,4 @@
-package Serveur;
+package src.main.Serveur;
 
 public class MainServeur {
 

@@ -1,10 +1,10 @@
-package Serveur;
+package src.main.Serveur;
 
 import java.io.IOException;
 import java.net.Socket;
 
 /**
- * Processus de Transaction (anciennement Serveur.ServeurSpecifique)
+ * Processus de Transaction (anciennement src.main.test.Serveur.ServeurSpecifique)
  */
 class ServeurSpecifique extends Thread {
 

@@ -1,4 +1,4 @@
-package Serveur;
+package src.main.Serveur;
 
 import java.io.*;
 import java.net.*;
@@ -31,7 +31,7 @@ public class ServeurTCP extends Thread{
 
 
 	public String toString() {        
-		return "[Serveur.ServeurTCP] Port : " +  numeroPort + ", Contexte: " + contexte ;
+		return "[src.main.test.Serveur.ServeurTCP] Port : " +  numeroPort + ", Contexte: " + contexte ;
 	} 
 
 	public void run() {
