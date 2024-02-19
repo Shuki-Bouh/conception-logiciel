@@ -1,4 +1,4 @@
-package src.main.Serveur;
+package Serveur;
 
 public interface IContext {
 

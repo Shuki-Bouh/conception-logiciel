@@ -1,19 +1,15 @@
-package src.main.Client;
+package Client;
 
 import java.io.*;
 import java.net.*;
 
 public class ClientTCP {
 
-	private int numeroPort;
-
-	private String nomServeur;
-
+	private final int numeroPort;
+	private final String nomServeur;
 	private Socket socketServeur;
-
 	private PrintStream socOut;
-
-	private BufferedReader socIn;	
+	private BufferedReader socIn;
 	
 	/** Un client se connecte a un serveur identifie par un nom (unNomServeur), sur un port unNumero */
 	public  ClientTCP(String unNomServeur, int unNumero) {        
