@@ -13,8 +13,15 @@ class Automate implements IAutomate {
         monClientTCP = new ClientTCP("localhost", port);
         }
 
-    public void getData(int ligne) {
-        String[] msgServer = monClientTCP.transmettreChaine(toString(ligne));
+
+    private void load() {
+        int ligne = 0;
+
+    }
+
+
+    private void getData(int ligne) {
+        String[] msgServer = monClientTCP.transmettreChaine(String.valueOf(ligne));
         Data data = new Data(msgServer);
         datas[ligne] = data;
     }
@@ -27,5 +34,12 @@ class Automate implements IAutomate {
     @Override
     public void deconnexionBR() {
         monClientTCP.deconnecterDuServeur();
+    }
+
+
+    public static void main(String[] args) {
+        Automate auto = new Automate();
+        Data data = auto.datas[0];
+        System.out.println(String.valueOf(data.ph));
     }
         }
