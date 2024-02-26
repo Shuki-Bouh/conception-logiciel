@@ -1,41 +1,27 @@
 package Client;
 
+import java.util.ArrayList;
+
 class Automate implements IAutomate {
 
-    private Data data;
     private int port = 6666;
     private ClientTCP monClientTCP;
+    private Data[] datas = new Data[5819];
 
-    public void Automate() {
+
+    public Automate() {
         monClientTCP = new ClientTCP("localhost", port);
-        String[] time = ;
-        float[]
         }
 
-    private load() {
-        data = new Data();
-
+    public void getData(int ligne) {
+        String[] msgServer = monClientTCP.transmettreChaine(toString(ligne));
+        Data data = new Data(msgServer);
+        datas[ligne] = data;
     }
 
-    private int get_time(){
-        return data.time;
-        }
-
-    private void get_oxy() {
-        return data.oxy;
-        }
-
-    private void get_ph() {
-        return data.ph;
-        }
-
-    private void get_temp(){
-        return data.temp;
-        }
-
     @Override
-    private boolean connexionBR(){
-        return monClientTCP.connexionAuServeur()
+    public boolean connexionBR(){
+        return monClientTCP.connecterAuServeur();
     }
 
     @Override

@@ -1,17 +1,19 @@
 package Client;
 
 
+import java.util.ArrayList;
+
 class Data {
 
-    String[] time;
-    float[] temp;
-    float[] oxy;
-    float[] ph;
+    String time;
+    float temp;
+    float oxy;
+    float ph;
 
-    public void Data(String[] time, float[] temp, float[] oxy, float[] ph) {
-        this.time = time;
-        this.temp = temp;
-        this.oxy = oxy;
-        this.ph = ph;
+    public Data(String[] dataServer) {
+        this.time = dataServer[0];
+        this.temp = Float.parseFloat(dataServer[1]);
+        this.oxy = Float.parseFloat(dataServer[2]);
+        this.ph = Float.parseFloat(dataServer[3]);
     }
 }

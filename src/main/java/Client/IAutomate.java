@@ -7,8 +7,8 @@ package Client;
  */
 public interface IAutomate {
 
-	boolean connexionBanque();
+	boolean connexionBR();
 
-	void deconnexionBanque();
+	void deconnexionBR();
 	
 }

@@ -2,6 +2,7 @@ package Client;
 
 import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
 
 public class ClientTCP {
 
@@ -21,7 +22,7 @@ public class ClientTCP {
 		boolean ok = false;
 		try {
 			System.out.println("Tentative : " + nomServeur + " -- " + numeroPort);
-			socketServeur = new Socket( nomServeur, numeroPort);
+			socketServeur = new Socket(nomServeur, numeroPort);
 			socOut = new PrintStream(socketServeur.getOutputStream());
 			socIn = new BufferedReader ( 
 					new InputStreamReader (socketServeur.getInputStream()));
@@ -51,14 +52,19 @@ public class ClientTCP {
 		}
 	} 	
 	
-	public String transmettreChaine(String uneChaine) {        
-		String msgServeur = null;
+	public String[] transmettreChaine(String uneChaine) {
+		String[] msgServeur = new String[4];
 		try {
 			System.out.println( "Requete client : " + uneChaine );
 			socOut.println( uneChaine );
 			socOut.flush();
-			msgServeur = socIn.readLine();
-			System.out.println( "Reponse serveur : " + msgServeur );
+			//msgServeur = socIn.readLine();
+			int i = 0;
+			while(socIn.readLine() != null){
+				msgServeur[i] = socIn.readLine();
+				i++;
+			}
+			//System.out.println( "Reponse serveur : " + msgServeur );
 
 		} catch (UnknownHostException e) {
 			System.err.println("src.main.test.Serveur inconnu : " + e);
