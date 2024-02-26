@@ -7,7 +7,5 @@ public class MainServeur {
 		bioreact=new Bioreacteur();
 		ServeurTCP myServ = new ServeurTCP(new UnContexte() , new ProtocolePingPong() , 6666 );
 		myServ.start();
-
-		
 	}
 }
