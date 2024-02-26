@@ -1,4 +1,4 @@
-package src.main.Client;
+package Client;
 
 public class MainClient {
 

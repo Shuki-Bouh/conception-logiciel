@@ -1,4 +1,4 @@
-package src.main.Serveur;
+package Serveur;
 
 public class UnContexte implements IContext {
 

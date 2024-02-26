@@ -1,4 +1,4 @@
-package src.main.Client;
+package Client;
 
 import java.io.*;
 import java.net.*;

@@ -1,4 +1,4 @@
-package src.main.Serveur;
+package Serveur;
 
 import org.apache.poi.ss.usermodel.*;
 
